@@ -3,10 +3,11 @@ import {
     FileOutlined,
     PieChartOutlined,
     TeamOutlined,
-    UserOutlined, } from '@ant-design/icons';
+    UserOutlined,
+} from '@ant-design/icons';
 import { Layout, Menu, theme } from 'antd';
 import React, { useState, useEffect, Fragment } from 'react';
-import ButtonAppBar from './layout/ButtonAppBar'
+import ButtonAppBar from '../../layout/ButtonAppBar';
 
 const { Header, Content, Footer, Sider } = Layout;
 function getItem(label, key, icon, children) {
@@ -31,7 +32,7 @@ const items = [
 ];
 
 
-const Home = () => {
+const Dashboard = () => {
     const [userEmail, setUserEmail] = useState('');
     const [loading, setLoading] = useState(true);
     const [collapsed, setCollapsed] = useState(false);
@@ -84,7 +85,7 @@ const Home = () => {
                         background: colorBgContainer,
                     }}
                 /> */}
-                            <ButtonAppBar />
+                            {/* <ButtonAppBar /> */}
                             <Content
                                 style={{
                                     margin: '0 16px',
@@ -112,7 +113,7 @@ const Home = () => {
                 </Fragment>
             )}
         </div>
-        
+
     );
 };
-export default Home;
+export default Dashboard;

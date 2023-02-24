@@ -1,9 +1,8 @@
-from rest_framework import serializers
-from .models import Student
+from rest_framework.serializers import ModelSerializer
+from .models import CustomUser
 
 
-class StudentSerializer(serializers.ModelSerializer):
+class UserSerializer(ModelSerializer):
     class Meta:
-        model = Student
-        fields = ['id', 'stuname', 'email']
-
+        model = CustomUser
+        fields = ('email', 'last_login', 'date_joined', 'is_staff')

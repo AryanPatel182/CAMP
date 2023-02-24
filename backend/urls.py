@@ -1,6 +1,7 @@
-from django.urls import path
+from django.urls import path, include
 from backend import views
 
 urlpatterns = [
-    path("student/", views.StudentList.as_view())
+    path('auth/', include('rest_auth.urls')),
+    path('auth/register/', include('rest_auth.registration.urls'))
 ]
