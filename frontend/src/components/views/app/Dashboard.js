@@ -5,7 +5,7 @@ import {
     TeamOutlined,
     UserOutlined,
 } from '@ant-design/icons';
-import { Layout, Menu, theme } from 'antd';
+import { Layout, Menu, theme, Button } from 'antd';
 import React, { useState, useEffect, Fragment } from 'react';
 import ButtonAppBar from '../../layout/ButtonAppBar';
 
@@ -71,21 +71,18 @@ const Dashboard = () => {
                         <Sider collapsible collapsed={collapsed} onCollapse={(value) => setCollapsed(value)}>
                             <div
                                 style={{
-                                    height: 32,
-                                    margin: 16,
-                                    background: 'rgba(255, 255, 255, 0.2)',
-                                }}
-                            />
+                                    margin: "auto",
+                                    width: "50%",                                
+                                    padding:"10px"
+                                    // background: 'rgba(255, 255, 255, 0.2)',
+                                }}>
+                                <Button shape="circle">
+                                    {userEmail[0].toUpperCase()}
+                                </Button>  
+                            </div>
                             <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline" items={items} />
                         </Sider>
-                        <Layout className="site-layout">
-                            {/* <Header
-                    style={{
-                        padding: 0,
-                        background: colorBgContainer,
-                    }}
-                /> */}
-                            {/* <ButtonAppBar /> */}
+                        <Layout className="site-layout">                                                        
                             <Content
                                 style={{
                                     margin: '0 16px',

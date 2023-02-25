@@ -52,21 +52,21 @@ export default function ButtonAppBar() {
         <Box sx={{ flexGrow: 1 }}>
             <AppBar position="static">
                 <Toolbar>
-                    <IconButton
+                    {/* <IconButton
                         size="large"
                         edge="start"
                         color="inherit"
                         aria-label="menu"
                         sx={{ mr: 2 }}
                     >
-                        <MenuIcon />
-                    </IconButton>
+                        <MenuIcon /> 
+                    </IconButton> */}
                     <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
                         CAMP                                                                                                 
                     </Typography>
                     {logoutVisible && (<Button onClick={showModal}>                        
                         Logout
-                    </Button>)}                                  
+                    </Button>)}                                                    
                     <Modal title="Logout" open={isModalOpen} onOk={handleOk} onCancel={handleCancel} okText="Logout">
                         <p>Are you sure you want to Logout?</p>
                     </Modal>

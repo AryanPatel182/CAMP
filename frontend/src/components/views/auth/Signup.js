@@ -1,5 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Fragment } from 'react';
 import { Button, Checkbox, Form, Input, Row, Col } from 'antd';
+
+import { Link } from 'react-router-dom';
 
 const onFinishFailed = (errorInfo) => {
     console.log('Failed:', errorInfo);
@@ -126,9 +128,15 @@ const Signup = () => {
                                         span: 16,
                                     }}
                                 >
-                                    <Button type="primary" htmlType="submit">
+                                    <Button type="primary" htmlType="submit" style={{ margin: "0 10px" }}>
                                         Submit
                                     </Button>
+                                    <Fragment>
+                                        {' '}
+                                        <Button htmlType="submit">
+                                            <Link to='/'>Back</Link>                                            
+                                        </Button>
+                                    </Fragment>
                                 </Form.Item>
                             </Form>
                         )}

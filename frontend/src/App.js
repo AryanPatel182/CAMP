@@ -4,8 +4,6 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom"; 
-import {Student} from './components/Student';
-import Home from './components/Home';
 import Navbar from './components/layout/Navbar'; // import navbar
 import Login from './components/views/auth/Login'; // new 
 import Signup from './components/views/auth/Signup'; // new
@@ -28,16 +26,11 @@ const router = createBrowserRouter([
   {
     path: "/dashboard",
     element: <Dashboard/>,
-  },
-
+  }  
 ]);
 
 function App() {  
   return (
-    // <div className="App">
-    //   {/* <Student /> */}
-    //   <Home/>
-    // </div>
     <div className='App'>
       <ButtonAppBar />
       <RouterProvider router={router} />
